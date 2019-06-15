@@ -1,0 +1,13 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+runner = "gdb -q -x openocd.gdb"
+
+rustflags = [
+	# LLD (shipped as part of the Rust toolchain) is automatically
+	# the default linker. Specify the link script:
+	"-C", "link-arg=-Tlink.x",
+]
+
+[build]
+target = "thumbv7em-none-eabihf" # note -eabihf. the hf means that we are
+								 # building for a target with "hard float" –
+								 # that is, a dedicated floating point unit!
