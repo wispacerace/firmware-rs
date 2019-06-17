@@ -1,8 +1,9 @@
 [package]
-name = "firmware"
+name = "fcu"
 version = "0.1.0"
-authors = ["Liam Marshall <limarshall@wisc.edu>"]
-edition = "2018"
+authors = ["Liam Marshall <limarshall@wisc.edu>"] # add yourself here!
+edition = "2018" # switch to newer Rust language features.
+publish = false # keeps us from accidentally pushing to crates.io
 
 [dependencies]
 cortex-m = "0.6.0"
