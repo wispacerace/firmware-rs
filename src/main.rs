@@ -17,6 +17,6 @@ fn main() -> ! {
     asm::nop(); // prevent main from optimizing to abort in release mode.
                 // remove when there is actually code here.
 
-    loop {
+    loop { // test
     }
 }
