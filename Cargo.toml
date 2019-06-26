@@ -1,23 +1,16 @@
-[package]
-name = "fcu"
-version = "0.1.0"
-authors = ["Liam Marshall <limarshall@wisc.edu>"] # add yourself here!
-edition = "2018" # switch to newer Rust language features.
-publish = false # keeps us from accidentally pushing to crates.io
-
-[dependencies]
-cortex-m = "0.6.0"
-cortex-m-rt = "0.6.8"
-panic-halt = "0.2.0"
-panic-itm = "0.4.1"
+[workspace]
+members = [
+  "fcu",
+  "ecu",
+]
 
 [profile.release]
 codegen-units = 1 # improve optimizations. controls how many threads are used
-				  # during code generation; typically defaults to #cores, but
-				  # >1 thread improves compilation speed at the expense
-				  # of optimization quality.
+                  # during code generation; typically defaults to #cores, but
+                  # >1 thread improves compilation speed at the expense
+                  # of optimization quality.
 debug = true      # debug symbols! this doesn't actually increase FLASH
-				  # utilization since symbols are stripped from the uploaded
-				  # .bin; your debugger looks at the _local copy of the ELF file_
-				  # to figure out what addresses map to what symbols.
+                  # utilization since symbols are stripped from the uploaded
+                  # .bin; your debugger looks at the _local copy of the ELF file_
+                  # to figure out what addresses map to what symbols.
 lto = true        # better optimizations (reoptimize at link-time)

@@ -1,0 +1,20 @@
+[package]
+name = "fcu"
+version = "0.1.0"
+authors = ["Liam Marshall <limarshall@wisc.edu>"] # add yourself here!
+edition = "2018" # switch to newer Rust language features.
+publish = false # keeps us from accidentally pushing to crates.io
+
+[dependencies]
+cortex-m = "0.6.0"
+cortex-m-rt = "0.6.8"
+panic-halt = "0.2.0"
+panic-itm = "0.4.1"
+
+[dependencies.stm32f4]
+version = "0.7.1"
+features = ["stm32f413", "rt"]
+
+[dependencies.cortex-m-rtfm]
+git = "https://github.com/japaric/cortex-m-rtfm"
+rev = "fafeeb2"
