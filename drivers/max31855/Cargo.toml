@@ -1,0 +1,7 @@
+[package]
+name = "max31855"
+version = "0.1.0"
+authors = ["Liam Marshall <limarshall@wisc.edu>"]
+edition = "2018"
+
+[dependencies]

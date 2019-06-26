@@ -2,6 +2,7 @@
 members = [
   "fcu",
   "ecu",
+  "drivers/max31855",
 ]
 
 [profile.release]
